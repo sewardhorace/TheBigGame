@@ -19,7 +19,7 @@ class Level():
 
     # How far this world has been scrolled left/right
     world_shift = 0
-    level_limit = -1000
+    level_limit = -1000 #i may not need this... or modify it to define boundaries (referenced in platform_scroller too
 
     def __init__(self, player):
         """Constructor.  Pass in a handle to player.  Needed when moving platform
@@ -142,7 +142,7 @@ class Level_02(Level):
 
         self.background = pygame.image.load("background_02.png").convert()
         self.background.set_colorkey(constants.WHITE)
-        self.level_limit = -1000
+        self.level_limit = -2000
 
         # Array with types of platforms, x,y locations of the platform.
         level = [ [platforms.STONE_PLATFORM_LEFT, 500, 550],

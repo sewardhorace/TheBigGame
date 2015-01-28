@@ -169,6 +169,10 @@ class Player(pygame.sprite.Sprite):
         """ called when user lets off the keyboard"""
         self.change_x = 0
 
-
+    #checks to see if player is touching a door he could warp through (needs work to select which door)
+    def door(self):
+        feature_hit_list = pygame.sprite.spritecollide(self, self.level.feature_list, False)
+        if len(feature_hit_list) > 0:
+            return True
 
             

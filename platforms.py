@@ -104,6 +104,7 @@ the player around or add code to handle what happens if they don't. """
             self.change_x *= -1
             
 
+#should I make subclasses for each specific warp door?
 class Feature(pygame.sprite.Sprite):
 
     def __init__(self, sprite_sheet_data):

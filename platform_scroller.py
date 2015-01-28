@@ -80,6 +80,12 @@ def main():
                 if event.key == pygame.K_UP:
                     player.jump()
 
+                #if player is touching a door, warp levels.
+                if event.key == pygame.K_DOWN and player.door():
+                    current_level_no = 1
+                    current_level = level_list[current_level_no]
+                    player.level = current_level
+
             if event.type == pygame.KEYUP:
                 if event.key == pygame.K_LEFT and player.change_x < 0:
                     player.stop()
